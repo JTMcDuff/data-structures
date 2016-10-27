@@ -151,7 +151,6 @@ define([
       });
 
       it('removes the oldest item, after newer items have already been added and removed', function() {
-
         queue.enqueue('a');
         queue.enqueue('b');
         queue.dequeue();
