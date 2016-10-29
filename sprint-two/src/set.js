@@ -16,9 +16,16 @@ setPrototype.contains = function(item) {
 };
 
 setPrototype.remove = function(item) {
-  delete this._storage.item;
+  if (this._storage.item) {
+    delete this._storage.item;
+    return true;
+  }
+  return false;
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+// add() - constant
+// contains() - constant
+// remove() - constant

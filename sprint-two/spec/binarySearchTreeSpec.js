@@ -36,4 +36,9 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3]);
   });
+
+  it('it should not add the same number twice', function() {
+    binarySearchTree.insert(2);
+    expect(binarySearchTree.insert(2)).to.equal(false);
+  });
 });

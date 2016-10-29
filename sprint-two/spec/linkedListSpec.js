@@ -51,5 +51,11 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
-  // add more tests here to test the functionality of linkedList
+  it('should accept multiple arugments', function() {
+    linkedList.addToTail(5, 2, 6, 8);
+    expect(linkedList.contains(5)).to.equal(true);
+    expect(linkedList.contains(2)).to.equal(true);
+    expect(linkedList.contains(6)).to.equal(true);
+    expect(linkedList.contains(8)).to.equal(true);
+  })
 });

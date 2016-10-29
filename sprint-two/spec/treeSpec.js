@@ -41,4 +41,9 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  it('should insert the same value multiple times', function() {
+    tree.addChild(11);
+    tree.addChild(11);
+    expect(tree.containsNum(11)).to.equal(2);
+  })
 });

@@ -3,6 +3,7 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
+  //extend to accept multiple arguments
   list.addToTail = function(value) {
      var added = Node(value);
      if (list.tail === null ) {
@@ -47,3 +48,6 @@ var Node = function(value) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+ // addToTail() - Constant
+ // removeHead() - Constant
+ // contains() - Linear

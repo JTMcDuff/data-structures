@@ -24,6 +24,7 @@ var binarySearchTreeMethods = {};
 // -- 4b. If value is not null call function to go back to step one on left node
 
 binarySearchTreeMethods.insert = function(value) {
+  var dup = true;
   var recursion = function(node) {
     if (value > node.value) {
       if (node.right === null) {
@@ -38,10 +39,11 @@ binarySearchTreeMethods.insert = function(value) {
         recursion(node.left);
       }
     } else if (value === node.value) {
-      return false;
+      dup = false;
     }
   }
   recursion(this);
+  return dup;
 };
 
 // 1 check if node.value is equal to value
@@ -77,3 +79,6 @@ binarySearchTreeMethods.depthFirstLog = function(callback) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+// insert() - Linear
+// contains() - Linear
+// depthFirstLog() - Linear

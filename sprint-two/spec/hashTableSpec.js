@@ -47,6 +47,12 @@ describe('hashTable', function() {
     window.getIndexBelowMaxForKey = oldHashFunction;
   });
 
+  it('should be able to accept multiple arguments and add them to the hash table', function() {
+    hashTable.insert('Hello', 'my friend', 'Writing', 'a random test');
+    expect(hashTable.retrieve('Hello')).to.equal('my friend');
+    expect(hashTable.retrieve('Writing')).to.equal('a random test');
+  });
+
   // (Advanced! Remove the extra "x" when you want the following tests to run)
   xit ('should double in size when needed', function() {
     _.each(people, function(person) {

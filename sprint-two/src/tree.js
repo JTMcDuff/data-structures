@@ -35,9 +35,14 @@ treeMethods.contains = function(target) {
   }
   return false;
 };
+//Function would return number of instances of target.
+treeMethods.containsNum = function(target) {
 
+}
 
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+// addChild - constant
+// constaints - linear

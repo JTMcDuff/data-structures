@@ -1,5 +1,3 @@
-
-
 var HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
@@ -65,5 +63,7 @@ var hashTableMethods = new HashTable();
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
+// insert() - logarithmic
+// retrieve() - logrithmic
+// remove() - logrithmic
 
