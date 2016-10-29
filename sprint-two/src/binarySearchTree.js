@@ -45,15 +45,27 @@ binarySearchTreeMethods.insert = function(value) {
 };
 
 // 1 check if node.value is equal to value
-// 1a if equal return true;
-// 1b else call function on node.left and node.right
-//
+//   1a if equal return true.
+//   2 else, check for branches.
+//       if left exists, check left.
+//          if left is empty, end this recursive branch.
+//       if right exists, check right.
+//          if right is empty, end this recursive branch.
+//  2b return results of left and right with or statement.
+//  return result of recursive function.
 
 binarySearchTreeMethods.contains = function(value) {
   var recursion = function(node) {
-
-  }
-   var end = recursion(this);
+     var resultleft = false;
+     var resultright = false;
+     if (node.value === value) { return true;}
+     else {
+       if (node.left) { resultleft = recursion(node.left);  }
+       if (node.right) { resultright = recursion(node.right); }
+       return (resultleft || resultright);
+     }
+     };
+   return recursion(this);
 };
 
 binarySearchTreeMethods.depthFirstLog = function(callback) {
