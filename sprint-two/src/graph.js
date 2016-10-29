@@ -74,10 +74,3 @@ var graphMethods = new Graph();
  * Complexity: What is the time complexity of the above functions?
  */
 
-
-//Graph
-//  Node{key: string/number, value: value, edges: {}}
-//  Node{ value: "value",
-//        edges: {}
-//      }
-//
